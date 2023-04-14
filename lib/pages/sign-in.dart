@@ -71,6 +71,8 @@ class SignInState extends State<SignIn> {
   }
 
   Future<void> takePicture() async {
+    print("Samji _faceDetectorService");
+    print(_faceDetectorService.faces);
     if (_faceDetectorService.faceDetected) {
       await _cameraService.takePicture();
       setState(() => _isPictureTaken = true);
